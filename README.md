@@ -61,5 +61,5 @@ const newHTML = render(`
 `, data);
 ```
 ```JavaScript
-const newHTML = render(document.getElementById('#tpl'), data);
+const newHTML = render(document.getElementById('tpl'), data);
 ```

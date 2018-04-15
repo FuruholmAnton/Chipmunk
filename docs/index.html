@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super simple template renderer</title>
+
+    <style>
+        html {
+            height: 100%;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+        .div {
+            max-width: 400px;
+            text-align: center;
+            background: #ddd;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <template id="tpl">
+        <div class="div">
+            <p>{{ text }}</p>
+            <span>{{ span }}</span>
+        </div>
+        <p>{{ obj.complex }}</p>
+    </template>
+    
+    <script src="script.js"></script>
+</body>
+</html>

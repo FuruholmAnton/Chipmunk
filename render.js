@@ -1,16 +1,29 @@
+/**
+ * A simple template rendering function
+ * 
+ * @param {*} ref - Either a DOM reference or a string selector
+ * @param {*} data - An object containing the values to replace with
+ * @return new HTML string with replaced values
+ */
 export default function render(ref, data) {
-	if (typeof ref == 'string') ref = document.querySelector(ref);
-	let tplString = ref.innerHTML;
-	return tplString.replace(/\{{(.*?)\}}/g, (match) => {
-		let v = data;
-		// Remove brackets and Trim whitespace
-		match.slice(2, match.length - 2)
-			.trim()
-			.split('.')
-			.forEach(n => {
-				if (n) v = v[n];
-			});
+    // Get the element if ref is a string
+    if (typeof ref == 'string') ref = document.querySelector(ref);
 
-		return v || '';
-	});
+    // Stores the html as a string
+    let tplString = ref.innerHTML;
+
+    // Replaces all instances of brackets with coresponding value in the data object
+    return tplString.replace(/\{{(.*?)\}}/g, (match) => {
+        let v = data;
+        // Remove brackets and Trim whitespace
+        match.slice(2, match.length - 2)
+            .trim()
+            .split('.')
+            .forEach(n => {
+                if (n) v = v[n];
+            });
+
+        // Return value or empty tring if nonexistant
+        return v || '';
+    });
 }

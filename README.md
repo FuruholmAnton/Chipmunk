@@ -24,6 +24,8 @@ Example: <https://furuholmanton.github.io/Chipmunk/>
 </template>
 ```
 ```JavaScript
+import render from 'chipmunk-template';
+
 const newHTML = render('#tpl', {
     text: 'Success!',
     span: 'This text is rendered by JS.',

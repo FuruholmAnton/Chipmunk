@@ -12,7 +12,7 @@ yarn add chipmunk-template
 
 Example: <https://furuholmanton.github.io/Chipmunk/>
 
----
+
 ## Usage
 ```HTML
 <template id="tpl">
@@ -52,6 +52,9 @@ document.body.innerHTML += newHTML;
 Other possibilities
 
 ```JavaScript
+const newHTML = render(document.getElementById('tpl'), data);
+```
+```JavaScript
 const newHTML = render(`
     <div class="div">
         <p>{{ text }}</p>
@@ -59,7 +62,4 @@ const newHTML = render(`
     </div>
     <p>{{ obj.complex }} {{ obj.nest.as.deep.as.you.want }}</p>
 `, data);
-```
-```JavaScript
-const newHTML = render(document.getElementById('tpl'), data);
 ```

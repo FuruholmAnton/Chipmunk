@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * A simple template rendering function
  * 
@@ -5,7 +7,7 @@
  * @param {*} data - An object containing the values to replace with
  * @return new HTML string with replaced values
  */
-export default function render(ref, data) {
+function render(ref, data) {
     let tplString;
 
     // Get the element if ref is a string selector
@@ -18,7 +20,7 @@ export default function render(ref, data) {
             tplString = ref;
         }
     } 
-    if (!tplString) tplString = ref.innerHTML
+    if (!tplString) tplString = ref.innerHTML;
 
     // Replaces all instances of brackets with coresponding value in the data object and then return
     return tplString.replace(/\{{(.*?)\}}/g, (match) => {
@@ -35,3 +37,23 @@ export default function render(ref, data) {
         return v || '';
     });
 }
+
+const newHTML = render('#tpl', {
+    text: 'Success!',
+    span: 'This text is rendered by JS.',
+    obj: {
+        complex: 'Nesting also ',
+        nest: {
+            as: {
+                deep: {
+                    as: {
+                        you: {
+                            want: 'works',
+                        }
+                    }
+                }
+            }
+        }
+    }
+});
+document.body.innerHTML += newHTML;

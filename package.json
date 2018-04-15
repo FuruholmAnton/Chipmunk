@@ -1,5 +1,5 @@
 {
-  "name": "chipmunk",
+  "name": "chipmunk-template",
   "author": {
     "name": "Anton Furuholm",
     "email": "anton.furuholm@gmail.com",
@@ -10,7 +10,7 @@
   "main": "chipmunk.js",
   "repository": {
     "type": "git",
-    "url": "https://furuholmanton.github.io/Chipmunk/"
+    "url": "https://github.com/FuruholmAnton/Chipmunk.git"
   },
   "keywords": [
     "javascript"

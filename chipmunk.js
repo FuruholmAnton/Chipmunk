@@ -9,10 +9,10 @@ export default function render(ref, data) {
     // Get the element if ref is a string
     if (typeof ref == 'string') ref = document.querySelector(ref);
 
-    // Stores the html as a string
+    // Stores the HTML as a string
     let tplString = ref.innerHTML;
 
-    // Replaces all instances of brackets with coresponding value in the data object
+    // Replaces all instances of brackets with coresponding value in the data object and then return
     return tplString.replace(/\{{(.*?)\}}/g, (match) => {
         let v = data;
         // Remove brackets and Trim whitespace
@@ -23,7 +23,7 @@ export default function render(ref, data) {
                 if (n) v = v[n];
             });
 
-        // Return value or empty tring if nonexistant
+        // Replacing with value or empty string if nonexistant
         return v || '';
     });
 }

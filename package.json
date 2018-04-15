@@ -8,4 +8,21 @@
   "keywords": [
     "javascript"
   ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup ./docs/script.js --o ./docs/dist/script.es5.js --f cjs --watch",
+    "build": "rollup -c --environment BUILD:es5",
+    "build:cjs": "rollup -c --environment BUILD:cjs",
+    "build:es": "rollup -c --environment BUILD:es",
+    "build:prod": "npm run build && npm run build:cjs && npm run build:es"
+
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }

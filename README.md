@@ -41,6 +41,6 @@ const newHTML = render('#tpl', {
             }
         }
     }
-})
+});
 document.body.innerHTML += newHTML;
 ```

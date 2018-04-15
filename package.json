@@ -1,0 +1,19 @@
+{
+  "name": "chipmunk",
+  "author": {
+    "name": "Anton Furuholm",
+    "email": "anton.furuholm@gmail.com",
+    "url": "https://www.furuholm.com/"
+  },
+  "version": "1.0.0",
+  "description": "Super simple template renderer",
+  "main": "chipmunk.js",
+  "repository": {
+    "type": "git",
+    "url": "https://furuholmanton.github.io/Chipmunk/"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "license": "MIT"
+}

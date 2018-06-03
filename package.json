@@ -1,7 +1,7 @@
 {
   "name": "chipmunk-template",
   "author": "Anton Furuholm <anton.furuholm@gmail.com> (https://www.furuholm.com/)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Super simple template renderer",
   "main": "chipmunk.js",
   "repository": "https://github.com/FuruholmAnton/Chipmunk.git",

@@ -21,7 +21,7 @@ export default function render(ref, data) {
     if (!tplString) tplString = ref.innerHTML
 
     // Replaces all instances of brackets with coresponding value in the data object and then return
-    return tplString.replace(/\{{(.*?)\}}/g, (match) => {
+    return tplString.replace(/\{\{([\s\S]*?)\}\}/g, (match) => {
         let v = data;
         // Remove brackets and Trim whitespace
         match.slice(2, match.length - 2)

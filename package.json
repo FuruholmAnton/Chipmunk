@@ -5,6 +5,7 @@
   "description": "Super simple template renderer",
   "main": "chipmunk.js",
   "repository": "https://github.com/FuruholmAnton/Chipmunk.git",
+  "type": "module",
   "keywords": [
     "javascript"
   ],

@@ -4,11 +4,16 @@ import uglify from 'rollup-plugin-uglify';
 
 const config = {
     input: 'chipmunk.js',
-    output: {
-        file: 'chipmunk.es5.js', // equivalent to --output
-        format: 'iife',
-        name: 'render'
-    },
+    output: [
+        {
+            file: 'docs/chipmunk.js',
+        },
+        {
+            file: 'chipmunk.es5.js', // equivalent to --output
+            format: 'iife',
+            name: 'render',
+        }
+    ],
 	plugins: [
         resolve(),
 		babel({
